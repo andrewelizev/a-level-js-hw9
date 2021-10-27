@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A-level</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="import" href="main.js">
+</head>
+<body>
+    <div class="wrapper">
+
+        <header>
+            <h1>Homework 9</h1>
+        </header>
+
+        <main>
+            <h2>Chat</h2>
+            <div id="chatBody">
+                <div class="message">
+                    <span class="date">27.10.2021</span>
+                    <span class="nick">Shadber</span>
+                    <p class="message-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga impedit harum non? Voluptatem illum impedit enim facere temporibus, ad veniam maiores reiciendis, fugit accusamus, vero repellat consequatur iste atque perferendis.</p>
+                </div>
+            </div>
+            <div class="send-message">
+                <form action="#">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="nick">Nickname</label>
+                            <input type="text" id="chatNick" class="form-control" name="nick">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <input type="text" id="chatMessageText" name="message" class="form-control">
+                        </div>
+                        <button type="button" class="btn btn-primary" id="btnSend">Send</button>
+                    </div>
+                </form>
+            </div>
+
+            <p>Текст ниже это просто содержимое js-файла.</p>
+            <iframe src="main.js"></iframe>
+        </main>
+
+        <footer>
+            <p>Андрей Елизев <a href="https://github.com/andrewelizev/a-level-homeworks" target="_blank">
+                                <img src="http://elizev.info/icons/github.png" alt="GitHub"></a>
+                             <a href="https://t.me/Shadber" target="_blank">
+                                <img src="http://elizev.info/icons/telegram.png" alt="Telegram"></a>
+                             <a href="tel:+380509418703">
+                                <img src="http://elizev.info/icons/telephone.png" alt="tel. +38(050)941-87-03"></a>
+            </p>
+        </footer>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
