@@ -30,33 +30,37 @@ async function checkLoop(id) {
     let timerId = await setInterval(() => getMessages(id), 5000);
 }
 
-// async function jsonPost(url, data) {
-//     console.log(url);
-//     console.log(data);
+async function jsonPost(url, data) {
+    let request = {
+            method: 'POST',
+            body: JSON.stringify(data)
+    };
 
-//     let response = await fetch(url, data);
-//     return result = await response.json();
-// }
+    let response = await fetch(url, request);
+    let messages = await response.json();
 
-
-function jsonPost(url, data) {
-    return new Promise((resolve, reject) => {
-        var x = new XMLHttpRequest();
-        x.onerror = () => reject(new Error('jsonPost failed'));
-        x.open("POST", url, true);
-        x.send(JSON.stringify(data));
-
-        x.onreadystatechange = () => {
-            if (x.readyState === XMLHttpRequest.DONE && x.status === 200){
-                // console.log(JSON.parse(x.responseText));
-                resolve(JSON.parse(x.responseText));
-            }
-            else if (x.status !== 200){
-                reject(new Error('status is not 200'));
-            }
-        };
-    });
+    return messages;
 }
+
+
+// function jsonPost(url, data) {
+//     return new Promise((resolve, reject) => {
+//         var x = new XMLHttpRequest();
+//         x.onerror = () => reject(new Error('jsonPost failed'));
+//         x.open("POST", url, true);
+//         x.send(JSON.stringify(data));
+
+//         x.onreadystatechange = () => {
+//             if (x.readyState === XMLHttpRequest.DONE && x.status === 200){
+//                 // console.log(JSON.parse(x.responseText));
+//                 resolve(JSON.parse(x.responseText));
+//             }
+//             else if (x.status !== 200){
+//                 reject(new Error('status is not 200'));
+//             }
+//         };
+//     });
+// }
 
 function createMessage() {
     let nickName = document.getElementById('chatNick');
