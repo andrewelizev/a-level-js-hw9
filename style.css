@@ -29,7 +29,9 @@ main {
     border: 1px solid grey;
     border-radius: 10px;
     min-height: 500px;
+    max-height: 500px;
     margin-bottom: 10px;
+    overflow-y: scroll;
 }
 .message {
     background-color: lightgrey;
@@ -43,6 +45,10 @@ main {
 }
 .nick {
     font-weight: bold;
+}
+.index {
+    font-size: small;
+    float: right;
 }
 .message-text {
     margin-top: 10px;
